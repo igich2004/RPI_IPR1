@@ -1,0 +1,322 @@
+/* сброс стандартных отступов браузера */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* основные настройки для всей страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+/* стили для шапки сайта */
+header {
+    background-color: #474A51;
+    padding: 15px 20px;
+}
+
+/* горизонтальное меню */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+/* цвет текста в меню */
+nav ul li {
+    color: white;
+}
+
+/* скрытие элементов мобильной навигации на пк */
+#navigation {
+    display: none;
+}
+
+#three_lines {
+    display: none;
+}
+
+/* общие стили для секций со стрелками */
+.text_arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* стили для стрелок */
+.text_arrow p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* первый баннер (голубой) */
+#awesome {
+    background-color: #00aaff;
+    color: white;
+    padding: 80px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* заголовок в первом баннере */
+#awesome h1 {
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+/* текст сайта в первом баннере */
+#awesomeblaz {
+    color: #d3d3d3;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* большая стрелка в первом баннере */
+#awesome > p {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* второй баннер (темный) */
+.text_arrow:not(#awesome) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #2C2C2C;
+    color: #CFCFCF;
+}
+
+/* текстовый блок во втором баннере */
+.text_arrow:not(#awesome) div {
+    flex: 1;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* розовый квадрат со стрелкой */
+#robin_arrow {
+    background-color: #c71585;
+    color: white;
+    width: 120px;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* текст про Robin Hood */
+#robin {
+    font-size: 28px;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* секция с фотографиями */
+.photo-arrow-section {
+    display: flex;
+    align-items: stretch;
+    background-color: #e0e0e0;
+}
+
+/* блок с фотографиями */
+.images {
+    display: flex;
+    flex: 3;
+    margin: 0;
+}
+
+/* фиолетовый квадрат со стрелкой */
+.photo-arrow {
+    background-color: #4b0082;
+    color: white;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+    min-height: 100%;
+}
+
+/* стили для изображений */
+.gallery_image {
+    width: 50%;
+    height: auto;
+    display: block;
+}
+
+/* секция с карточками текста */
+.cards-section {
+    background-color: #e0e0e0;
+    width: 100%;
+    margin: 0;
+    padding: 30px 0;
+}
+
+/* контейнер для карточек */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* одна карточка с текстом */
+.card {
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 300px;
+}
+
+/* заголовок над карточками */
+#blazblue {
+    color: #0077cc;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 38px;
+}
+
+/* текст внутри карточек */
+.card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+
+/* стили для больших экранов (от 981px) */
+@media (min-width: 981px) {
+    body {
+        max-width: 900px;
+    }
+    
+    h1 {
+        font-size: 36px;
+    }
+    
+    h2 {
+        font-size: 32px;
+    }
+    
+    .cards-container {
+        gap: 30px;
+    }
+}
+
+/* стили для планшетов (от 641px до 979px) */
+@media (min-width: 641px) and (max-width: 979px) {
+    body {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    /* карточки располагаются в 2 колонки */
+    .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+/* стили для мобильных устройств (640px и меньше) */
+@media (max-width: 640px) {
+    body {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    /* скрываем пункты меню на мобильных */
+    nav ul li:not(#three_lines):not(#navigation) {
+        display: none;
+    }
+    
+    /* показываем элементы мобильной навигации */
+    #navigation {
+        display: block;
+    }
+    
+    #three_lines {
+        display: block;
+    }
+    
+    /* растягиваем меню на всю ширину */
+    nav ul {
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    /* секция с фото становится вертикальной */
+    .photo-arrow-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    /* фиолетовая стрелка на всю ширину сверху */
+    .photo-arrow {
+        width: 100%;
+        min-height: 300px;
+        height: auto;
+    }
+    
+    /* фотографии располагаются вертикально */
+    .images {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    /* каждое фото на всю ширину */
+    .gallery_image {
+        width: 100%;
+        height: auto;
+    }
+    
+    /* первый баннер становится вертикальным */
+    #awesome {
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 40px 20px;
+    }
+    
+    /* текст в баннере на всю ширину */
+    #awesome div {
+        width: 100%;
+    }
+    
+    /* отступы для секции с карточками */
+    .cards-section {
+        padding: 30px 0;
+    }
+    
+    .cards-container {
+        padding: 0 15px;
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивный шаблон (Задание 1)</title>
+</head>
+<body>
+    <!-- шапка сайта с навигацией -->
+    <header>
+        <nav>
+            <ul>
+                <!-- пункты меню для пк -->
+                <li>PSD Websites</li>
+                <li>UI Kits</li>
+                <li>Premium PSD Files</li>
+                <li>About</li>
+                <li>Blog</li>
+                
+                <!-- элементы для мобильной версии (скрыты на пк) -->
+                <li id="navigation">Navigation</li>
+                <li id="three_lines">☰</li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- первый баннер с голубым фоном -->
+        <section class="text_arrow" id="awesome">
+            <div>
+                <h1>Awesome Free PSD<br>templates & Resources</h1>
+                <p id="awesomeblaz">www.BlazRobar.com</p>
+            </div>
+            <p>→</p>
+        </section>
+
+        <!-- второй баннер (темный, про Robin Hood) -->
+        <section class="text_arrow">
+            <div>
+                <h2 id="robin">I'm like the Robin Hood of PSD files.</h2>
+            </div>
+            <p id="robin_arrow">→</p>
+        </section>
+
+        <!-- секция с фотографиями и фиолетовой стрелкой -->
+        <section class="photo-arrow-section">
+            <div class="photo-arrow">→</div>
+            <div class="images">
+                <img src="images/Photo_1.jpg" alt="Photo 1" class="gallery_image">
+                <img src="images/Photo_2.jpg" alt="Photo 2" class="gallery_image">
+            </div>
+        </section>
+
+        <!-- секция с текстовыми карточками -->
+        <section class="cards-section">
+            <h3 id="blazblue">BlazRobar.com</h3>
+            <div class="cards-container">
+                <!-- первая карточка -->
+                <div class="card">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula ipsum non leo tristique eget facilisis. Curabitur vitae justo lorem, non ornare nibh. Pellentesque pretium, tellus ac ultrices faucibus, nibh mauris dapibus lorem, vitae viverra nisl elit sit amet libero. Nam eu blandit risus.</p>
+                </div>
+                
+                <!-- вторая карточка -->
+                <div class="card">
+                    <p>Phasellus imperdiet mattis nulla. Integer gravida imperdiet congue. Proin vitae pretium augue. Donec est sem, mattis et blandit ac, blandit at arcu. Donec tempus tincidunt suscipit. Suspendisse eu vulputate lacus.</p>
+                </div>
+                
+                <!-- третья карточка -->
+                <div class="card">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula ipsum non leo tristique eget facilisis. Curabitur vitae justo lorem, non ornare nibh. Pellentesque pretium, tellus ac ultrices faucibus, nibh mauris dapibus lorem, vitae viverra nisl elit sit amet libero. Nam eu blandit risus.</p>
+                </div>
+                
+                <!-- четвертая карточка -->
+                <div class="card">
+                    <p>Phasellus imperdiet mattis nulla. Integer gravida imperdiet congue. Proin vitae pretium augue. Donec est sem, mattis et blandit ac, blandit at arcu. Donec tempus tincidunt suscipit. Suspendisse eu vulputate lacus.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
